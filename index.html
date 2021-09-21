@@ -1,0 +1,134 @@
+<! DOCTYPE html >
+< html  lang = " en " >
+< cabeça >
+    < meta  charset = " UTF-8 " >
+    < meta  name = " viewport " content = " width = device-width, initial-scale = 1.0 " >
+    < link  rel = " stylesheet " href = " https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900 " >
+    < título > Documento </ título >
+    < estilo >
+
+corpo {
+    cor de fundo : branco;
+}
+  
+# timer {
+  cor :  # eeeeee ;
+  alinhamento de texto : centro;
+  transformação de texto : maiúsculas;
+  família da fonte :  'Lato' , sans-serif;
+  tamanho da fonte :  .7 em ;
+  espaçamento entre letras :  5 px ;
+}
+
+. dias , . horas , . minutos , . segundos {
+  display : bloco embutido;
+  preenchimento :  20 px ;
+  largura :  100 px ;
+  raio da borda :  5 px ;
+}
+
+. dias {
+  plano de fundo :  # EF2F3C ;
+}
+
+. horas {
+  plano de fundo :  # eeeeee ;
+  cor :  # 183059 ;
+}
+
+. minutos {
+  plano de fundo :  # 276FBF ;
+}
+
+. segundos {
+  plano de fundo :  # F0A202 ;
+}
+
+. números {
+  família da fonte :  'Montserrat' , sans-serif;
+  cor :   # 183059 ;
+  tamanho da fonte :  4 em ;
+  alinhamento de texto : centro;
+}
+
+. branco {
+  posição : absoluta;
+  plano de fundo :   # eeeeee ;
+  altura :  85 px ;
+  largura :  75 px ;
+  esquerda :  30 % ;
+  topo :  2 % ;
+}
+
+. cinza {
+  posição : absoluta;
+  plano de fundo :   # EF2F3C ;
+  esquerda :  18 % ;
+  topo :  9 % ;
+  altura :  65 px ;
+  largura :  70 px ;
+ 
+}
+
+. branco {
+  posição : absoluta;
+  plano de fundo :   # 276FBF ;
+  altura :  80 px ;
+  largura :  80 px ;
+  esquerda :  60 % ;
+  topo :  5 % ;
+
+
+}
+
+
+    </ estilo >
+</ head >
+< corpo >
+    
+< div  id = " timer " >
+
+    < div  class = " days " > 
+        < div  id = " days " class = " numbers " >  </ div > dias </ div > 
+      < div  class = " hours " > 
+        < div   id = " hours " class = " numbers " >  </ div > horas </ div > 
+      < div  class = " minutes " > 
+        < div   id = " minutes " class = " numbers " >  </ div > minutos </ div > 
+      < div    class = " segundos " > 
+        < div  id = " seconds " class = " numbers " >  </ div > segundos </ div > 
+      </ div >
+
+</ div >
+
+</ body >
+< script >
+     ano  const =  nova  data ( ) . getFullYear ( ) ;
+const  myDate  =  new  Date ( '09 de janeiro de 2022 00:00:00' ) ;
+console . log ( minhaData ) ;
+
+// contagem regressiva
+let  timer  =  setInterval ( function ( )  {
+
+  // obter a data de hoje
+  const  today  =  new  Date ( ) . getTime ( ) ;
+
+  // pega a diferença
+  const  diff  =  myDate  -  hoje ;
+
+  // matemática
+  deixe  dias  =  matemática . piso ( dif.  /  ( 1000  *  60  *  60  *  24 ) ) ;
+  deixe  horas  =  matemática . piso ( ( diff  %  ( 1000  *  60  *  60  *  24 ) )  /  ( 1000  *  60  *  60 ) ) ;
+  deixe  minutos  =  matemática . piso ( ( diff  %  ( 1000  *  60  *  60 ) )  /  ( 1000  *  60 ) ) ;
+  deixe  segundos  =  matemática . chão ( ( diff  %  ( 1000  *  60 ) )  /  1000 ) ;
+
+  // exibição
+  documento . getElementById ( "dias" ) . innerHTML = dias
+  documento . getElementById ( "horas" ) . innerHTML = hours
+  documento . getElementById ( "minutos" ) . innerHTML = minutos
+  documento . getElementById ( "segundos" ) . innerHTML = segundos
+
+
+
+} ,  1 ) ;
+</ script >
+</ html >
